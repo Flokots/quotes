@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from 'src/app/model/quote';
-import { QuotesDetailsComponent } from '../quotes-details/quotes-details.component';
 
 @Component({
   selector: 'app-quotes-display',
@@ -15,11 +14,13 @@ export class QuotesDisplayComponent implements OnInit {
     new Quote(3, 'Strive not to be a success, but rather to be of value.', 'Albert Einstein', 'Albert Einstein', 0, 0),
     new Quote(4, 'I attribute my success to this: I never gave or took any excuse.', 'Florence Nightingale', 'Florence Nightingale', 0, 0),
   ];
+  prevNum!: number;
+  lastNum!: number;
 
   toggleDetails(index: number) {
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
-  addNewQuote(quote: Quote){
+  addNewQuote(quote: Quote) {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
     this.quotes.push(quote);
@@ -30,7 +31,19 @@ export class QuotesDisplayComponent implements OnInit {
       this.quotes.splice(index, 1);
     }
   }
-  constructor() {}
+
+  highestUpVote() {
+    this.prevNum = 0;
+    this.lastNum = 0;
+    for (let i = 0; i < this.quotes.length; i++) {
+      this.lastNum = this.quotes[i].upVotes;
+      if (this.lastNum > this.prevNum){
+        this.prevNum = this.lastNum;
+      }
+    }
+    return this.prevNum;
+  }
+  constructor() { }
 
   ngOnInit(): void {
   }

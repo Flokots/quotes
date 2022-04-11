@@ -8,7 +8,8 @@
         <div class="small-quote-box">
           <ul>
             <li id={{i}}>
-              <p class="quote-description" > {{quote.description}}</p> 
+              <p appHighlight *ngIf='highestUpVote() === quote.upVotes && quote.upVotes > 0' class="quote-description"> {{quote.description}}</p>
+              <p *ngIf='highestUpVote() !== quote.upVotes || quote.upVotes === 0' class="quote-description"> {{quote.description}}</p>
               <p class="author"> - <em>{{quote.author}}</em></p>
               <p class="submitter-list">Submitted by <strong><em> {{quote.submitter}}</em></strong></p>
               <button (click)="toggleDetails(i)" class="form-button">Toggle Details</button>
