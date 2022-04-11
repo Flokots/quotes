@@ -24,6 +24,9 @@ export class QuotesDisplayComponent implements OnInit {
     new Quote(12, 'Life is 10% what happens to me and 90% of how I react to it.','Charles Swindoll','Charles Swindoll'),
   ];
 
+  toggleDetails(index: number) {
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
+  }
   addNewQuote(quote: Quote){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
