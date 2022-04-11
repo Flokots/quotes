@@ -22,7 +22,13 @@ export class QuotesDisplayComponent implements OnInit {
     new Quote(10, 'Life is what happens to you while you\'re busy making other plans.','John Lennon','John Lennon'),
     new Quote(11, 'We become what we think about','Earl Nightingale','Earl Nightingale'),
     new Quote(12, 'Life is 10% what happens to me and 90% of how I react to it.','Charles Swindoll','Charles Swindoll'),
-  ]
+  ];
+
+  addNewQuote(quote: Quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    this.quotes.push(quote);
+  }
   constructor() {}
 
   ngOnInit(): void {

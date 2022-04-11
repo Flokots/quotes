@@ -17,8 +17,10 @@
       </div>
     </div>
     <div class="col-md-6">
-      <app-quotes-details></app-quotes-details>
-      <app-quotes-form></app-quotes-form>
+      <div *ngFor="let quote of quotes">
+        <app-quotes-details [quote] = 'quote' ></app-quotes-details>
+      </div>
+      <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
     </div>
   </div>
 </div>

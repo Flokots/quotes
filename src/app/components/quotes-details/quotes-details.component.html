@@ -3,10 +3,10 @@
     <div class="quote-box">
       <div class="quote-text">
         <i class="fa fa-quote-left quote-icon"></i>
-        <span id="quote-text"></span>
+        <span id="quote-text">{{quote.description}} </span>
       </div>
       <div class="quote-author">
-        -<span id="author"></span>
+        -<span id="author">{{quote.author}}</span>
       </div>
       <div class="row buttons">
         <div class="col-sm-6">
@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="submitter">
-      <p>Submitted by <strong>Winter Sun</strong> 10 days ago</p>
+      <p>Submitted by <strong>{{quote.submitter}}</strong> 10 days ago</p>
     </div>
   </div>
 </div>
