@@ -10,9 +10,8 @@
       </div>
       <div class="row">
         <div class="col-sm-6">
-          <div  class="row">
+          <div class="row">
             <div class="col-sm-3 thumbs">
-              
               <i (click)="upVoteQuote()" class="fa fa-thumbs-o-up icon"></i>
               <p>{{quote.upVotes}}</p>
             </div>
@@ -24,15 +23,13 @@
         </div>
         <div class="col-sm-6 del-button">
           <div class="row">
-              <button (click)="quoteDelete(true)" class="quote-button delete">Delete Quote</button>
+            <button (click)="quoteDelete(true)" class="quote-button delete">Delete Quote</button>
           </div>
         </div>
       </div>
     </div>
     <div class="submitter">
-      <p>Submitted by <strong>{{quote.submitter}}</strong> on {{quote.dateAdded|date}} 10 days ago</p>
+      <p><strong>{{quote.dateAdded|date}}: </strong>Submitted by <strong>{{quote.submitter}}</strong> {{quote.dateAdded| elapsedTime}} ago</p>
     </div>
   </div>
 </div>
-
-
