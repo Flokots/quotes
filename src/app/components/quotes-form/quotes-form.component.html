@@ -5,15 +5,17 @@
       <div class="form-group">
         <label for="submitter">Name</label>
         <input type="text" class="form-control quote-input" id="name" [(ngModel)]="newQuote.submitter" name="submitter" #submitter='ngModel' required> 
-        {{submitter}}
+        {{newQuote.submitter}}
       </div>
       <div class="form-group">
         <label for="description">Quote</label>
         <textarea class="form-control quote-input" id="description" rows="4" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required></textarea>
+        {{newQuote.description}}
       </div>
       <div class="form-group">
         <label for="author">Author</label>
         <input type="text" id="author" class="form-control quote-input" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
+        {{newQuote.author}}
       </div>
       <div>
         <button class="form-button">Add Quote</button>
