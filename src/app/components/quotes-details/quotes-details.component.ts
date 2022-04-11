@@ -15,11 +15,11 @@ export class QuotesDetailsComponent implements OnInit {
     this.deleteQuote.emit(sureDelete);
   }
   upVoteQuote() {
-    this.quote.upVotes ++;    
-  } 
+    this.quote.upVotes++;
+  }
 
   downVoteQuote() {
-    this.quote.downVotes ++;
+    this.quote.downVotes++;
   }
   constructor() { }
 
