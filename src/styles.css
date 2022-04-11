@@ -50,10 +50,6 @@ body {
   font-size: 1em;
   text-align: right;
 }
-.buttons {
-  width: 450px;
-  margin: auto;
-}
 .quote-button {
   height: 50px;
   width: 75px;
@@ -151,4 +147,9 @@ textarea {
   padding: 8px;
   opacity: 1;
   
+}
+.delete {
+  margin-left: auto;
+  margin-right: 2px;
+
 }

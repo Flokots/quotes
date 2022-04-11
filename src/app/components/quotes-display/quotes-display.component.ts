@@ -14,6 +14,9 @@ export class QuotesDisplayComponent implements OnInit {
     new Quote(2, 'Whatever the mind of man can conceive and believe, it can achieve.', 'Napoleon Hill', 'Napoleon Hill'),
     new Quote(3, 'Strive not to be a success, but rather to be of value.', 'Albert Einstein', 'Albert Einstein'),
     new Quote(4, 'I attribute my success to this: I never gave or took any excuse.', 'Florence Nightingale', 'Florence Nightingale'),
+    new Quote(4, 'I attribute my success to this: I never gave or took any excuse.', 'Florence Nightingale', 'Florence Nightingale'),
+    new Quote(4, 'I attribute my success to this: I never gave or took any excuse.', 'Florence Nightingale', 'Florence Nightingale'),
+    new Quote(4, 'I attribute my success to this: I never gave or took any excuse.', 'Florence Nightingale', 'Florence Nightingale'),
 ];
 
   toggleDetails(index: number) {
@@ -23,6 +26,12 @@ export class QuotesDisplayComponent implements OnInit {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
     this.quotes.push(quote);
+  }
+
+  deleteQuoteFunction(deleteQuote: boolean, index: number) {
+    if (deleteQuote) {
+      this.quotes.splice(index, 1);
+    }
   }
   constructor() {}
 

@@ -18,8 +18,8 @@
       </div>
     </div>
     <div class="col-md-6">
-      <div *ngFor="let quote of quotes">
-        <app-quotes-details *ngIf="quote.showDetails" [quote] = 'quote' ></app-quotes-details>
+      <div *ngFor="let quote of quotes; let i = index">
+        <app-quotes-details *ngIf="quote.showDetails" [quote] = 'quote' (deleteQuote)="deleteQuoteFunction($event, i)" ></app-quotes-details>
       </div>
       <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
     </div>

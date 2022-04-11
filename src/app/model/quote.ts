@@ -4,7 +4,7 @@ export class Quote {
     public id: number,
     public description: string,
     public author: string,
-    public submitter: string
+    public submitter: string,    
   ){
     this.showDetails=false;
   }
