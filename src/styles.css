@@ -12,8 +12,8 @@ div {
   z-index: 2;
 }
 body {
-  background-color: #333;
-  color: #333;
+  background-color: #041F1E;
+  color: #041F1E;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   justify-content: center;
@@ -27,7 +27,8 @@ body {
   width: 450px;
   padding: 40px 50px;
   display: table;
-  background-color: #fff;
+  background-color: #F7DBA7;
+  margin-top: 2em;
 }
 .quote-text{
   text-align: center;
@@ -53,13 +54,13 @@ body {
   width: 450px;
   margin: auto;
 }
-button {
+.quote-button {
   height: 50px;
   width: 75px;
   border: none;
   border-radius: 3px;
   color: #fff;
-  background-color: #333;
+  background-color: #041F1E;
   outline: none;
   font-size: 1em;
   padding: 8px;
@@ -96,8 +97,8 @@ h1 {
   font-size: 64px;
 }
 .small-quote-box {
-  color: #333;
-  background-color: #fff;
+  color: #1E2D2F;
+  background-color: #F1AB86;
   border-radius: 5px;
 }
 .author {
@@ -114,4 +115,39 @@ h1 {
 }
 .quote-description {
   padding-top: 2em;
+}
+h2 {
+  color: #1E2D2F;
+  text-align: center;
+  font-family: 'Italianno', cursive;
+  font-size: 64px;
+  font-weight:500;
+
+}
+.quote-input {
+  background-color: #C57B57;
+}
+textarea {
+  background-color: #C57B57;
+}
+.form-sect {
+  margin-bottom: 2em;
+  border:#1E2D2F;
+  background-color:#F7DBA7;
+  color: #1E2D2F;
+  padding: 2em;
+  
+}
+.form-button {
+  margin: 15px;
+  max-width: 100%;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #041F1E;
+  outline: none;
+  font-size: 1em;
+  padding: 8px;
+  opacity: 1;
+  
 }
