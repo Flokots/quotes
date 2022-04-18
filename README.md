@@ -46,5 +46,5 @@ Should you notice any bug or want to add a feature, contributions are highly wel
 ### Contact
 florencekotohoyoh@gmail.com
 ### License
-[MIT](https://choosealicense.com/licenses/mit/t/)
+[MIT](https://choosealicense.com/licenses/mit/)
 Copyright (c) 2022
